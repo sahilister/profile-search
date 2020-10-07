@@ -1,20 +1,19 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Navbar extends Component {
+const Navbar = () => {
   // static defaultProps = {
   //   title: 'Github Finder'
   // }
-  render() {
     return(
       <nav className="navbar is-light" role="navigation">
         <div className="navbar-brand">
-          <a className="navbar-item" href="#">
-            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="200" height="400" />
+          <a className="navbar-item" href="https://github.com/sahilister">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github-logo" />
           </a>
+          <h2>Profile Search</h2>
         </div>
       </nav>
     );
-  }
 }
 
 export default Navbar;
