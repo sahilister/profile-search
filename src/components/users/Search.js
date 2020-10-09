@@ -16,11 +16,20 @@ class Search extends Component {
   }
 
   render() {
-    return(
-      <form onSubmit={this.onSubmit} className="form">
-        <input type="text" name="text" placeholder="search" value={this.state.text} onChange={this.onChange}/>
-        <input type="submit" value="search" />
-      </form>
+    return(!this.props.users.length > 0 ?
+      <div>
+        <form onSubmit={this.onSubmit} className="form">
+          <input type="text" name="text" placeholder="search" className="textarea" value={this.state.text} onChange={this.onChange}/>
+          <input type="submit" value="search" className="button"/>
+        </form>
+      </div> :
+      <div>
+        <form onSubmit={this.onSubmit} className="form">
+          <input type="text" name="text" placeholder="search" className="textarea" value={this.state.text} onChange={this.onChange}/>
+          <input type="submit" value="search" className="button"/>
+        </form>
+        <button className="button" onClick={this.props.clearUsers}>Clear</button>
+      </div>
     )
   }
 }
