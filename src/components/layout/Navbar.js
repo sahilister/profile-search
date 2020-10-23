@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   // static defaultProps = {
@@ -11,6 +12,14 @@ const Navbar = () => {
             <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="github-logo" />
           </a>
           <h2>Profile Search</h2>
+          <ul>
+            <li>
+              <Link to='/'>Home</Link>
+            </li>
+            <li>
+              <Link to='/about'>About</Link>
+            </li>
+          </ul>
         </div>
       </nav>
     );
